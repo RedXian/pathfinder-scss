@@ -1,0 +1,141 @@
+//colors
+$color_background: #fffdf8;
+$color_links: #33337c;
+$black: black;
+$white: white;
+//fonts
+$main_font: PT Serif, serif;
+$stat_block_font: Lato, sans-serif;
+//urls
+$google_font_url: url("http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic");
+$image_background: url("bg-new.png");
+@import $google_font_url;
+
+body {
+  font: normal 14px $main_font;
+  background: $color_background $image_background top left no-repeat;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+h1 {
+  font-weight: normal;
+  margin: 30px 0 0;
+  font-size: 32px;
+
+  + p {
+    margin: 5px 0 10px;
+  }
+}
+
+h2 {
+  font-weight: normal;
+  margin: 30px 0 0;
+  font-size: 26px;
+
+  + p {
+    margin: 5px 0 10px;
+  }
+}
+
+h3 {
+  font-weight: normal;
+  margin: 30px 0 0;
+  font-size: 20px;
+
+  + p {
+    margin: 5px 0 10px;
+  }
+}
+
+p {
+  line-height: 1.4em;
+  margin: 15px 0;
+}
+
+sup {
+  line-height: 0;
+}
+
+a {
+  color: $color_links;
+  text-decoration: none;
+
+  &:active {
+    text-decoration: underline;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+strong {
+  font-weight: bold;
+}
+
+b {
+  font-weight: bold;
+}
+
+.monster-header {
+  font: normal 36px $main_font;
+  font-variant: small-caps;
+  font-weight: 600;
+  margin: 20px 0 10px;
+}
+
+.flavor-text {
+  font-style: italic;
+}
+
+.stat-block {
+  > * {
+    font: normal 13px $stat_block_font;
+    line-height: 1.5em;
+    margin: 5px 0;
+  }
+
+  > h1 {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background-color: $black;
+    color: $white;
+    margin: 25px 0 5px;
+    padding: 2px 0 2px 5px;
+
+    > span {
+      float: right;
+      padding: 0 5px 0 0;
+    }
+  }
+
+  > h2 {
+    font-size: 16px;
+    text-transform: uppercase;
+    border-top: 1px solid $black;
+    border-bottom: 1px solid $black;
+    margin: 8px 0;
+  }
+
+  > {
+    .indent {
+      text-indent: 25px;
+    }
+
+    .xp {
+      font-size: 14px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .rp {
+      padding: 0 0 0 10px;
+      font-weight: bold;
+      font-style: italic;
+    }
+  }
+}
